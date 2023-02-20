@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="#">EformsCreator</a></div>
+            <div class="menu" id="navmenubar">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </div>
+            <ul class="listItems" id="navmenu">
+                <div class="closebtn" id="closebtn">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </div>
+                <li class="navItems dropdown"><a class="navLinks dropdownLink" href="#">Business <i class="fa fa-caret-down dropdownIcon" aria-hidden="true"></i></a>
+                   
+                    <div class="megamenu">
+                       <ul class="content">
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Business Sheet Online</a></li>
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Employment Contract Online</a></li>
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Letter of Termination Online</a></li>
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Promissory Note Online</a></li>
+                       </ul>
+                       <ul class="content">
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Business Plan Online</a></li>
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Employee Handbook</a></li>
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Non-Disclosure Agreement Online</a></li>
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Release of Liability Online</a></li>
+                       </ul>
+                       <ul class="content">
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Cease and Desist All Copyright infringement Online</a></li>
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Invoice Online</a></li>
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Non-Compete Agreement Online</a></li>
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Warranty Deed Online</a></li>
+                       </ul>
+                       <ul class="content">
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Consulting Agreement Online</a></li>
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Job Application Form Online</a></li>
+                        <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Purchase Order Online</a></li>
+                    
+                       </ul>
+                   </div>
+                     
+                
+                </li>
+                <li class="navItems dropdown"><a class="navLinks dropdownLink" href="#">Family & Personal <i class="fa fa-caret-down dropdownIcon" aria-hidden="true"></i></a>
+                    <div class="megamenu">
+                        <ul class="content">
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Affidavit Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Boat Bill of Sale Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Letter Of Recommendation Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Personal Financial Statement Online</a></li>
+                        </ul>
+                        <ul class="content">
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Affidavit of Death Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>General Bill Of Sale Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Last Will and Testament Agreement Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Power of Attorney Online</a></li>
+                        </ul>
+                        <ul class="content">
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Affidavit of Heirship Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Guardianship Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Living Will Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Resignation Letter Online</a></li>
+                        </ul>
+                        <ul class="content">
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Birth certificate Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Letter of Agreement Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Medical Consent Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Vehicle bill Of Sale Online</a></li>
+                        </ul>
+                    </div></li>
+                <li class="navItems dropdown"><a class="navLinks dropdownLink" href="#">Deeds & Property <i class="fa fa-caret-down dropdownIcon" aria-hidden="true"></i></a>
+                    <div class="megamenu">
+                        <ul class="content">
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Affidavit of Small Estate Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Eviction Notice Online </a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Rental Application Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Triple Net Lease Agreement Online</a></li>
+                        </ul>
+                        <ul class="content">
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Article of Incorporation Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Lease Agreement Online k</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Residential Lease Agreement Online </a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Warranty Deed Online</a></li>
+                        </ul>
+                        <ul class="content">
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Commerical Lease Agreement </a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Month to Month Lease Agreement Online </a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Real Estate Purchase Online</a></li>
+               
+                        </ul>
+                        <ul class="content">
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Contract For Deed Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Quit Claim Deed Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>Sublease Agreement Online</a></li>
+               
+                        </ul>
+                    </div></li></li>
+                <li class="navItems dropdown"><a class="navLinks dropdownLink" href="#">Tax Forms <i class="fa fa-caret-down dropdownIcon" aria-hidden="true"></i></a>
+                    <div class="megamenu">
+                        <ul class="content taxForms">
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>1099-MISC Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>W3 Online</a></li>
+                        </ul>
+                        <ul class="content taxForms">
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>1099-NEC Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>W4 Online</a></li>
+                        </ul>
+                        <ul class="content taxForms">
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>2553 Form Online</a></li>
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>W9 Online</a></li>  
+                        </ul>
+                        <ul class="content taxForms">
+                         <li class="megamenuItem"><a href="#" class="megalink"><i class="fa fa-file-pdf-o" aria-hidden="true"></i>W2 Online</a></li>
+                        </ul>
+                    </div></li></li>
+                <li class="navItems"><a class="navLinks" href="#">Pay Stub Generator</a></li>
+                <li class="navItems"><a class="navLinks" href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="form_side">
+            <form action="" class="step current" id="step1">
+                <div class="email_section">
+                    <div class="input_field">
+                        <label>Email</label>
+                        <input type="email"  required id="email">
+                    </div>
+                </div>
+                <p class="statement">What is the name of the state and country in which the affidavit will be filed?</p>
+              <hr class="line_break">              
+              <div class="input_field">
+                <label>State Name</label>
+                <input type="text" id="State_Name">
+            </div>
+            <div class="input_field">
+                <label>County Name
+                </label>
+                <input type="text" id="County_Name">
+            </div>
+            <p class="statement">Can you please provide the Affiant's name, title, and address?
+                </p>
+                <hr class="line_break">   
+                <div class="input_field">
+                    <label>Affiant Personal Title:
+                    </label>
+                    <input type="text" id="Affiant_Personal_Title">
+                </div>
+                <div class="input_field">
+                    <label>Affiant Name:
+                    </label>
+                    <input type="text" id="Affiant_Name">
+                </div>
+                <div class="input_field">
+                    <label>Affiant Address</label>
+                    <input type="text" id="Affiant_Address">
+                </div>
+                <div class="three_box ">
+                    <div class="input_field min_width">
+                        <label>Affiant City:</label>
+                        <input type="text" id="Affiant_City">
+                    </div>
+                    <div class="input_field min_width Margin_left">
+                        <label>Affiant State:</label>
+                        <input type="text" id="Affiant_State">
+                    </div>
+                    <div class="input_field min_width Margin_left">
+                        <label>Affiant Zip Code:</label>
+                        <input type="text" id="Affiant_Zip_Code">
+                    </div>
+                </div>
+                <!-- <button id="Submit">Submit</button> -->
+            </form>
+            <form action="" class="step" id="step2">
+               <br><br>
+                <p class="statement"> Decedent, please provide the following information.</p>
+              <hr class="line_break">              
+              <div class="input_field">
+                <label>Decedent Personal Title:</label>
+                <input type="text" id="Decedent_Personal_Title">
+            </div>
+            <div class="input_field">
+                <label>Decedent Full Legal Name:
+                </label>
+                <input type="text" id="Decedent_Full_Legal_Name">
+            </div>
+            <div class="input_field">
+                <label>Decedent Place of Death:
+                </label>
+                <input type="text" id="Decedent_Place_of_Death">
+            </div> 
+                <div class="input_field">
+                    <label>Decedent Date of Death:
+                    </label>
+                    <input type="text" id="Decedent_Date_of_Death">
+                </div>
+                <div class="input_field">
+                    <label>Decedent Address:</label>
+                    <input type="text" id="Decedent_Address">
+                </div>
+                <div class="three_box ">
+                    <div class="input_field min_width">
+                        <label>Decedent City:</label>
+                        <input type="text" id="Decedent_City">
+                    </div>
+                    <div class="input_field min_width Margin_left">
+                        <label>Decedent State:</label>
+                        <input type="text" id="Decedent_State">
+                    </div>
+                    <div class="input_field min_width Margin_left">
+                        <label>Decedent Zip Code:</label>
+                        <input type="text" id="Decedent_Zip_Code">
+                    </div>
+                </div>
+                <!-- <button id="Submit">Submit</button> -->
+            </form>
+            <!-- ____________________________________________________________________________________________________ -->
+            <form action="" class="step" id="step3">
+                <p class="statement">Can you tell me the District Number or Court Name that has jurisdiction over this case?</p>
+              <hr class="line_break">              
+              <div class="input_field">
+                <label>District or Court Name:</label>
+                <input type="text" id="State_Name">
+            </div>
+            <p class="statement">What is your state's requirement regarding the number of days since the decedent died before an affidavit can be filed?</p>
+                <hr class="line_break">   
+                <div class="input_field">
+                    <label>Required Waiting Period Days:
+                    </label>
+                    <input type="text" id="Affiant_Personal_Title">
+                </div>
+                <p class="statement">What is the relationship between the Affiant and the Decedent?</p>
+                <hr class="line_break">
+                <div class="input_field">
+                    <label>Required Waiting Period Days:
+                    </label>
+                    <input type="text" id="Affiant_Personal_Title">
+                </div>
+                <p class="statement">How much is the total estimated value of the Decedent's estate?</p>
+                <hr class="line_break">
+                <div class="input_field">
+                    <label>Estate Value::
+                    </label>
+                    <input type="text" id="Affiant_Personal_Title">
+                </div>
+                <!-- <button id="Submit">Submit</button> -->
+            </form>
+            <form action="" class="step" id="step3">
+                <p class="statement">Please include all of the assets in the estate of the deceased. Would you wish to add the first property of the Decedent?</p>
+              <hr class="line_break">              
+             
+                <!-- <button id="Submit">Submit</button> -->
+            </form>
+        </div>
+        <!-- -------------------------------------------------- -->
+   
+        
+        <div class="pdf_side" id="pdf">
+            <!-- <embed src="PDF Form.pdf" type="application/pdf"> -->
+        </div>
+        
+    </div>
+    <hr class="break_line">  
+    <button class="button">Next</button>  
+   <script src="./script.js"></script>
+</body>
+</html>
