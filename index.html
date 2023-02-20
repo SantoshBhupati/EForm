@@ -258,10 +258,39 @@
                 </div>
                 <!-- <button id="Submit">Submit</button> -->
             </form>
-            <form action="" class="step" id="step3">
+            <form action="" class="step" id="step4">
                 <p class="statement">Please include all of the assets in the estate of the deceased. Would you wish to add the first property of the Decedent?</p>
               <hr class="line_break">              
-             
+              <div class="radio_button">
+                <label>Add first property?:</label>
+             <br>
+                <input type="radio" name="property"><span class="margin_left">Yes<span><br>
+                <input type="radio" name="property"><span class="margin_left">No</span>
+            </div>
+                <!-- <button id="Submit">Submit</button> -->
+            </form>
+            <form action="" class="step" id="step5">
+                <p class="statement">Are there any unpaid liabilities owed by the Decedent?</p>
+              <hr class="line_break">              
+              <div class="radio_button">
+                <label>Unpaid Liabilities:</label>
+               <br>
+                <input type="radio" name="property"><span class="margin_left">Yes<span><br>
+                <input type="radio" name="property"><span class="margin_left">No</span>
+            </div>
+                <!-- <button id="Submit">Submit</button> -->
+            </form>
+            <form action="" class="step" id="step5">
+                <p class="statement">Do you want to fill out the personal information for the two needed witnesses now or later?</p>
+              <hr class="line_break">              
+            <div class="select_input">
+                <label>Add now or later?:</label>
+                <br>
+                <select>
+                    <option value="Add now">Add now</option>
+                    <option value="Add later">Add later</option>
+                </select>
+            </div>
                 <!-- <button id="Submit">Submit</button> -->
             </form>
         </div>
@@ -275,6 +304,8 @@
     </div>
     <hr class="break_line">  
     <button class="button">Next</button>  
+    <button class="button active">Prev</button>
+    <button class="button  margin_left_button">Save And Continue later</button>
    <script src="./script.js"></script>
 </body>
 </html>

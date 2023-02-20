@@ -17,7 +17,7 @@ var Decedent_State=document.querySelector("#Decedent_State");
 var Decedent_Zip_Code=document.querySelector("#Decedent_Zip_Code");
 var steps=Array.from(document.querySelectorAll(".step"));
 var next_btn=document.querySelector(".button");
-
+var prev_btn=document.querySelector(".active");
 console.log(steps);
 
 
@@ -183,9 +183,15 @@ pdfPreview.innerHTML = "<embed src='" + objectURL + "' type='application/pdf' wi
     pdfPreview.innerHTML = "";
     pdfPreview.innerHTML = "<embed src='" + objectURL + "' type='application/pdf' width='100%' height='300px'>";
  }
-
+let step_number=1;
  next_btn.addEventListener("click",function(e){
     let index=0;
+    step_number=step_number+1;
+    if(step_number>1){
+        console.log(step_number)
+        next_btn.style.left='15%'
+        prev_btn.style.display = 'block';
+    }
     const current=document.querySelector(".current");
     // console.log(current);
     index=steps.indexOf(current);
@@ -194,6 +200,30 @@ pdfPreview.innerHTML = "<embed src='" + objectURL + "' type='application/pdf' wi
     index++;
     steps[index].classList.add('current');
 })
+ prev_btn.addEventListener("click",function(e){
+    e.preventDefault();
+    console.log("hiiiiiiiiii");
+    let index=0;
+    step_number=step_number-1;
+    if(step_number==1){
+        console.log(step_number)
+        next_btn.style.left='5%'
+        prev_btn.style.display = 'none';
+    }
+    const current=document.querySelector(".current");
+    // console.log(current);
+    index=steps.indexOf(current);
+    // console.log(index);
+    steps[index].classList.remove('current');
+    index--;
+    steps[index].classList.add('current');
+ })
+// if(step_number>1){
+//     console.log(step_number)
+//     next_btn.style.left='15%'
+//     prev_btn.style.display = 'block';
+// }
+
 State_Name.addEventListener("change",function(e){
     main_checking();
 })
