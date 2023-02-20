@@ -18,7 +18,7 @@ var Decedent_Zip_Code=document.querySelector("#Decedent_Zip_Code");
 var steps=Array.from(document.querySelectorAll(".step"));
 var next_btn=document.querySelector(".button");
 var prev_btn=document.querySelector(".active");
-console.log(steps);
+// console.log(steps);
 
 
 //loading pdf
@@ -36,7 +36,11 @@ doc.text(20,123,"Decendat Name:_______________");
 doc.text(20,133,"Date of death:_______________");
 doc.text(20,143,"Place of death:_______________");
 doc.text(20,153,"here is actual copy of Decendats death certificate");
-doc.setFontSize(25);
+doc.text(20,163,"The Decedent resided at time of  death at")
+doc.text(20,173,"________________,___________,______________,__________")
+doc.text(20,183,"The _____________shall have jurisdiction over this matter since the Decendent ")
+doc.text(20,193,"stayed within this jurisdiction prior death")
+doc.setFontSize(25); 
 doc.setFont("helvetica", "bold");
 doc.text(55,30,"Affidavit of Small Estate");
 doc.setFontSize(20);
@@ -53,6 +57,17 @@ var objectURL = URL.createObjectURL(pdfBlob);
 pdfPreview.innerHTML = "";
 pdfPreview.innerHTML = "<embed src='" + objectURL + "' type='application/pdf' width='100%' height='300px'>";
 
+
+
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////
  function main_checking(value){
     var doc_1 = new jsPDF();
     // doc_1.text(20, 20, "Name: ");
@@ -163,6 +178,33 @@ pdfPreview.innerHTML = "<embed src='" + objectURL + "' type='application/pdf' wi
     }
    
     doc_1.text(20,153,"here is actual copy of Decendats death certificate");
+
+    if(Decedent_Address.value !=""){
+        doc_1.text(20,163,`${Decedent_Address.value}`)
+    }else{
+
+    }
+    if(Decedent_City.value !=""){
+        doc_1.text(20,163,`${Decedent_Address.value},${Decedent_City.value}`)
+    }else{
+
+    }
+    if(Decedent_State.value !=""){
+        doc_1.text(20,163,`${Decedent_Address.value},${Decedent_City.value},${Decedent_State.value}`)
+    }
+    else{
+
+    }
+    if(Decedent_Zip_Code.value !=""){
+        doc_1.text(20,163,`${Decedent_Address.value},${Decedent_City.value},${Decedent_State.value},${Decedent_Zip_Code.value}`)
+    }
+    
+    if(Decedent_Address.value =="" & Decedent_City.value =="" & Decedent_State.value =="" & Decedent_Zip_Code.value==""){
+        doc_1.text(20,163,"________________,___________,______________,__________")
+    }
+
+    doc_1.text(20,173,"The _____________shall have jurisdiction over this matter since the Decendent ")
+    doc_1.text(20,183,"stayed within this jurisdiction prior death")
     doc_1.setFontSize(25);
     doc_1.setFont("helvetica", "bold");
     doc_1.text(55,30,"Affidavit of Small Estate");
@@ -188,21 +230,30 @@ let step_number=1;
     let index=0;
     step_number=step_number+1;
     if(step_number>1){
-        console.log(step_number)
+        // console.log(step_number)
         next_btn.style.left='15%'
         prev_btn.style.display = 'block';
     }
     const current=document.querySelector(".current");
     // console.log(current);
     index=steps.indexOf(current);
-    // console.log(index);
+    console.log(index);
+    if(index==5){
+        console.log(step_number)
+        next_btn.style.left='5%'
+        prev_btn.style.display = 'none';
+        steps[index-1].classList.remove('current');
+        steps[0].classList.add('current');
+    }
+    else{
     steps[index].classList.remove('current');
     index++;
     steps[index].classList.add('current');
+    }
 })
  prev_btn.addEventListener("click",function(e){
     e.preventDefault();
-    console.log("hiiiiiiiiii");
+    // console.log("hiiiiiiiiii");
     let index=0;
     step_number=step_number-1;
     if(step_number==1){
@@ -257,5 +308,21 @@ Decedent_Full_Legal_Name.addEventListener("change",function(e){
     main_checking();
 })
 Decedent_Date_of_Death.addEventListener("change",function(e){
+    main_checking();
+})
+
+Decedent_Place_of_Death.addEventListener("change",function(e){
+    main_checking();
+})
+Decedent_Address.addEventListener("change",function(e){
+    main_checking();
+})
+Decedent_City.addEventListener("change",function(e){
+    main_checking();
+})
+Decedent_State.addEventListener("change",function(e){
+    main_checking();
+})
+Decedent_Zip_Code.addEventListener("change",function(e){
     main_checking();
 })
